@@ -1,0 +1,152 @@
+.volunteer-page{
+background:#f6f3ef;
+min-height:100vh;
+}
+
+.volunteer-header{
+background:#4a1f3d;
+color:white;
+text-align:center;
+padding:40px;
+font-size:28px;
+}
+
+.volunteer-container{
+display:flex;
+gap:30px;
+padding:40px;
+}
+
+/* LEFT BOX */
+.roles-box{
+flex:1;
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.role{
+margin-top:20px;
+}
+
+/* RIGHT BOX */
+.process-box{
+flex:1;
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.step{
+display:flex;
+align-items:flex-start;
+gap:15px;
+margin-top:20px;
+}
+
+.number{
+background:#333;
+color:white;
+width:30px;
+height:30px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+}
+
+.apply-btn{
+margin-top:25px;
+padding:12px 25px;
+background:#333;
+color:white;
+border:none;
+border-radius:25px;
+cursor:pointer;
+font-size:16px;
+}
+.role {
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.role:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* 📱 Tablets */
+@media (max-width: 768px) {
+
+  /* Layout → Column */
+  .adopt-container,
+  .rescue-content,
+  .volunteer-container,
+  .clinics-section,
+  .card-container {
+    flex-direction: column;
+  }
+
+  /* Grid → 1 column */
+  .pet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Boxes full width */
+  .filter-box,
+  .roles-box,
+  .process-box,
+  .form-box {
+    width: 100%;
+  }
+
+  /* Map size */
+  .map-box {
+    height: 250px;
+  }
+
+  /* Images fix */
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Text resize */
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  /* Buttons full width */
+  button {
+    width: 100%;
+  }
+}
+
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .pet-card img {
+    height: 150px;
+    object-fit: cover;
+  }
+
+}

@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f3eeea;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: linear-gradient(to right, #4b2e53, #2e1a34);
+  color: white;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links .active {
+  border-bottom: 2px solid white;
+}
+
+.track-btn {
+  background-color: #2f5d50;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+}
+
+.login-btn {
+  background-color: white;
+  color: #2e1a34;
+  border: none;
+  padding: 10px 20px;
+   font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 90vh;
+  background:
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 24 24' fill='%23ffffff10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 12c2 0 3 1 3 3s-1 3-3 3-3-1-3-3 1-3 3-3zM5 9c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2zM19 9c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2zM8 5c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2zM16 5c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2z'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, #4b1d3f, #2d0f27);
+  background-repeat: repeat, no-repeat;
+  background-size: 120px, cover;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 120px 80px 0 80px;
+  color: white;
+}
+
+.hero-left {
+  text-align: center;
+  margin-top: -150px;
+}
+
+.dog {
+  width: 500px;
+  margin-top: -120px ;
+}
+
+
+
+.track-btn-hero {
+  margin-top: -10px;
+  padding: 20px 45px;
+  background: #2f4f4f;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgb(0,0,0,0.2);
+}
+
+.track-btn:hover{
+  background: #246363;
+  transform: scale(1.05);
+}
+ .paw-icon{
+  font-size: 22px;
+ }
+
+.hero-center {
+  text-align: left;
+  max-width: 700px;
+  margin-left: -40px;
+}
+
+.hero-center h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 150px;
+}
+
+.hero-right button {
+  margin-bottom: 15px;
+  padding: 14px 40px;
+  background: #2f4f4f;
+  border: 2px solid white;
+  color: white;
+  border-radius: 30px;
+}
+
+.hero-right .active {
+  background: #2f4f4f;
+  border: none;
+}
+
+/* ================= PROCESS ================= */
+
+.process {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 20px;
+  background: #f3f0ef; /* light background like inspo */
+}
+
+/* Step buttons */
+.step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: linear-gradient(135deg, #5a3a3a, #2f1c1c);
+  color: white;
+
+  padding: 18px 30px;     /* bigger size */
+  border-radius: 35px;    /* smooth rounded */
+
+  font-size: 16px;
+  min-width: 220px;       /* same width for all */
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.step:hover {
+  transform: translateY(-3px);
+}
+
+/* Number circle */
+.step span {
+  background: #ffffff;
+  color: #5a3a3a;
+  font-weight: bold;
+  border-radius: 50%;
+
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+/* Title */
+.step h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Subtitle */
+.step p {
+  margin: 0;
+  font-size: 13px;
+  color: #e0dcdc;
+}
+
+/* Arrow between steps */
+.arrow {
+  font-size: 26px;
+  color: #8b6f6f;
+}
+/* ================= SERVICES ================= */
+/* Section */
+.services {
+  padding: 80px 100px;
+  text-align: center;
+  background: #f3eeea;
+}
+
+/* Heading */
+.services h2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+/* Layout */
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  width: 380px;
+  min-height: 380px;
+  padding: 40px 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Icon (TOP, centered properly) */
+.service-icon {
+  font-size: 35px;
+  color: #2f6f6f;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Title */
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* Text */
+.card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Button (sticks to bottom) */
+.card button {
+  margin-top: auto;
+  padding: 12px 22px;
+  background: #3d3d3d;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Hover */
+.card button:hover {
+  background: #2f6f6f;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  transition: 0.3s;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: linear-gradient(to right, #4b2e53, #2e1a34);
+  color: white;
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-logo {
+  width: 100px;
+}
+
+.footer-middle {
+  text-align: center;
+}
+
+ .footer-middle a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.footer-middle a:hover {
+  text-decoration: underline;
+}
+
+.chatbot-icon {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #2f5d50;   /* same green as your buttons */
+  color: white;
+  font-size: 28px;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+
+.chatbot-popup{
+position:fixed;
+bottom:80px;
+right:20px;
+width:250px;
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+}
+
+.chatbot-icon:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2f4f4f;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 30px;
+  z-index: 1000;
+}
+
+/* CHATBOX */
+.chatbot-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 380px;
+  height: 500px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* HEADER */
+.chat-header {
+  background: #5f2c82;
+  color: white;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* BODY */
+.chat-body {
+  height: 360px;
+  padding: 10px;
+  overflow-y: auto;
+  background: #f5f5f5;
+}
+
+/* MESSAGES */
+.bot-msg {
+  background: #eaeaea;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.user-msg {
+  background: #1abc9c;
+  color: white;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 10px;
+  text-align: right;
+}
+
+/* FOOTER */
+.chat-footer {
+  display: flex;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.chat-footer button {
+  background: #1abc9c;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.chat-header span{
+  cursor: pointer;
+}
+
+/* ================= ADOPT PAGE ONLY ================= */
+
+.adopt-page {
+  background: #f6f3ef;
+  min-height: 100vh;
+}
+
+.adopt-header {
+  background: #4a1f3d;
+  color: white;
+  text-align: center;
+  padding: 40px;
+  font-size: 28px;
+}
+
+.adopt-container {
+  display: flex;
+  padding: 40px;
+  gap: 30px;
+}
+
+/* FILTER */
+.adopt-page .filter-box {
+  width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.adopt-page .filter-box label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.adopt-page .filter-box select {
+  width: 100%;
+  margin-top: 5px;
+  padding: 6px;
+}
+
+/* GRID */
+.adopt-page .pet-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+.adopt-page .pet-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-bottom: 15px;
+  transition: 0.3s;
+}
+
+.adopt-page .pet-card:hover {
+  transform: translateY(-5px);
+}
+
+.adopt-page .pet-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* BUTTONS */
+.adopt-page .card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.adopt-page .adopt-btn {
+  background: #2f5d50;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .adopt-page .pet-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .adopt-container {
+    flex-direction: column;
+  }
+
+  .adopt-page .pet-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* 📱 Tablets */
+@media (max-width: 768px) {
+
+  /* Layout → Column */
+  .adopt-container,
+  .rescue-content,
+  .volunteer-container,
+  .clinics-section,
+  .card-container {
+    flex-direction: column;
+  }
+
+  /* Grid → 1 column */
+  .pet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Boxes full width */
+  .filter-box,
+  .roles-box,
+  .process-box,
+  .form-box {
+    width: 100%;
+  }
+
+  /* Map size */
+  .map-box {
+    height: 250px;
+  }
+
+  /* Images fix */
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Text resize */
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  /* Buttons full width */
+  button {
+    width: 100%;
+  }
+}
+
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .pet-card img {
+    height: 150px;
+    object-fit: cover;
+  }
+
+}

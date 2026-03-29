@@ -1,0 +1,191 @@
+.abuse-container {
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  padding-bottom: 60px;
+}
+
+/* Purple Header */
+.abuse-header {
+  background: linear-gradient(135deg, #4b1d3f, #2f4f4f);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.abuse-header h1 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.abuse-header p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.abuse-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Steps */
+.steps-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  gap: 10px;
+}
+
+.step {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: #ddd;
+  font-weight: 500;
+}
+
+.step.active {
+  background: #4b0f5f;
+  color: white;
+}
+
+.arrow {
+  font-size: 18px;
+}
+
+/* Form */
+.form-section {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  gap: 40px;
+}
+
+.form-left {
+  width: 30%;
+}
+
+.form-left label {
+  display: block;
+  margin: 10px 0;
+}
+
+.form-right {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-right label {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.form-right input,
+.form-right select {
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  padding: 10px;
+  background: #4b0f5f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #6a1b9a;
+}
+
+/* Button group for side-by-side buttons */
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-group .submit-btn {
+  width: 50%;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* 📱 Tablets */
+@media (max-width: 768px) {
+
+  /* Layout → Column */
+  .adopt-container,
+  .rescue-content,
+  .volunteer-container,
+  .clinics-section,
+  .card-container {
+    flex-direction: column;
+  }
+
+  /* Grid → 1 column */
+  .pet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Boxes full width */
+  .filter-box,
+  .roles-box,
+  .process-box,
+  .form-box {
+    width: 100%;
+  }
+
+  /* Map size */
+  .map-box {
+    height: 250px;
+  }
+
+  /* Images fix */
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Text resize */
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  /* Buttons full width */
+  button {
+    width: 100%;
+  }
+}
+
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .pet-card img {
+    height: 150px;
+    object-fit: cover;
+  }
+
+}

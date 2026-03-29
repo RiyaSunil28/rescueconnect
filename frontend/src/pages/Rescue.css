@@ -1,0 +1,179 @@
+.rescue-container {
+  padding: 40px;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+.rescue-title {
+  text-align: center;
+  color: #4b2354;
+  margin-bottom: 30px;
+}
+
+/* STEP BUTTONS IMPROVED */
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.step {
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: none;
+  background: #e0e0e0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.step:hover {
+  background: #d0d0d0;
+}
+
+.step.active {
+  background: #4b2354;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* MAIN CONTENT CARD LOOK */
+.rescue-content {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* MAP BOX */
+.map-box {
+  width: 420px;
+}
+
+.fake-map {
+  height: 350px;
+  background: #cfcfcf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* FORM BOX IMPROVED */
+.form-box {
+  width: 420px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.form-box label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-box input,
+.form-box textarea,
+.form-box select {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.form-box textarea {
+  height: 100px;
+}
+
+/* BUTTON STYLE */
+.submit-btn {
+  background: #4b2354;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #36193e;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* 📱 Tablets */
+@media (max-width: 768px) {
+
+  /* Layout → Column */
+  .adopt-container,
+  .rescue-content,
+  .volunteer-container,
+  .clinics-section,
+  .card-container {
+    flex-direction: column;
+  }
+
+  /* Grid → 1 column */
+  .pet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Boxes full width */
+  .filter-box,
+  .roles-box,
+  .process-box,
+  .form-box {
+    width: 100%;
+  }
+
+  /* Map size */
+  .map-box {
+    height: 250px;
+  }
+
+  /* Images fix */
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Text resize */
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  /* Buttons full width */
+  button {
+    width: 100%;
+  }
+}
+
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .pet-card img {
+    height: 150px;
+    object-fit: cover;
+  }
+
+}

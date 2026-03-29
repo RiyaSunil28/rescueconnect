@@ -1,0 +1,212 @@
+.medical-container {
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  padding-bottom: 60px;
+}
+
+/* Purple Header */
+.medical-hero {
+  background: linear-gradient(135deg, #4b0f5f, #7b2cbf);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.medical-hero h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+/* Clinics Section */
+.clinics-section {
+  width: 85%;
+  margin: 40px auto;
+}
+
+.clinics-section h2 {
+  margin-bottom: 15px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background: #3a5a40;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background: #2d4731;
+}
+
+/* Map */
+.map-box {
+  height: 300px;
+  background: #d8d8d8;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+/* First Aid Section */
+.firstaid-section {
+  width: 85%;
+  margin: 40px auto;
+}
+
+.firstaid-section h2 {
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.aid-card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 5px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.aid-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Detail Page Layout */
+.detail-container {
+  background: #f8f8f8;
+  min-height: 100vh;
+}
+
+.detail-hero {
+  background: linear-gradient(135deg, #4b0f5f, #7b2cbf);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.detail-content {
+  width: 80%;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  line-height: 1.8;
+  font-size: 18px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.back-btn {
+  margin-bottom: 20px;
+  padding: 8px 15px;
+  background: #4b0f5f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background: #6a1b9a;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* 📱 Tablets */
+@media (max-width: 768px) {
+
+  /* Layout → Column */
+  .adopt-container,
+  .rescue-content,
+  .volunteer-container,
+  .clinics-section,
+  .card-container {
+    flex-direction: column;
+  }
+
+  /* Grid → 1 column */
+  .pet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Boxes full width */
+  .filter-box,
+  .roles-box,
+  .process-box,
+  .form-box {
+    width: 100%;
+  }
+
+  /* Map size */
+  .map-box {
+    height: 250px;
+  }
+
+  /* Images fix */
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Text resize */
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  /* Buttons full width */
+  button {
+    width: 100%;
+  }
+}
+
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .pet-card img {
+    height: 150px;
+    object-fit: cover;
+  }
+
+}
