@@ -73,47 +73,52 @@ function AppContent() {
   };
 
   // ✅ CHATBOT LOGIC
-  const getBotReply = (msg) => {
-    msg = msg.toLowerCase();
+ const getBotReply = (msg) => {
+  const text = msg.toLowerCase().trim();
 
-   if (msg.includes("wound")) {
-  setTimeout(() => navigate("/wound-care"), 1000);
-  return "🩹 Opening Wound Care...";
-}
+  // GREETING
+  if (text.includes("hi") || text.includes("hello")) {
+    return "Hello! 👋 I can help you with rescue, adoption, medical help, and volunteering.";
+  }
 
-if (msg.includes("fracture")) {
-  setTimeout(() => navigate("/fractures"), 1000);
-  return "🐾 Opening Fractures...";
-}
+  // RESCUE
+  if (text.includes("rescue") || text.includes("injured")) {
+    setTimeout(() => navigate("/rescue"), 800);
+    return "🐶 Taking you to Rescue page...";
+  }
 
-if (msg.includes("poison")) {
-  setTimeout(() => navigate("/poison-control"), 1000);
-  return "⚠️ Opening Poison Control...";
-}
+  // ABUSE
+  if (text.includes("abuse")) {
+    setTimeout(() => navigate("/abuse"), 800);
+    return "🚨 Opening Abuse report page...";
+  }
 
-if (msg.includes("emergency")) {
-  setTimeout(() => navigate("/emergency-signs"), 1000);
-  return "🚨 Opening Emergency Signs...";
-}
+  // MEDICAL
+  if (text.includes("medical") || text.includes("first aid")) {
+    setTimeout(() => navigate("/medical-help"), 800);
+    return "🏥 Opening Medical Help...";
+  }
 
-if (msg.includes("foster")) {
-  setTimeout(() => navigate("/volunteer/foster"), 1000);
-  return "🏠 Opening Foster Role...";
-}
+  // ADOPT
+  if (text.includes("adopt")) {
+    setTimeout(() => navigate("/adopt"), 800);
+    return "🐾 Showing pets for adoption...";
+  }
 
-if (msg.includes("transport")) {
-  setTimeout(() => navigate("/volunteer/transporter"), 1000);
-  return "🚚 Opening Transporter...";
-}
+  // VOLUNTEER
+  if (text.includes("volunteer")) {
+    setTimeout(() => navigate("/volunteer"), 800);
+    return "💚 Taking you to Volunteer page...";
+  }
 
-if (msg.includes("social")) {
-  setTimeout(() => navigate("/volunteer/social-media"), 1000);
-  return "📱 Opening Social Media Role...";
-}
+  // TRACK
+  if (text.includes("track") || text.includes("case")) {
+    setTimeout(() => navigate("/trackcase"), 800);
+    return "📍 Opening Case Tracking...";
+  }
 
-    return "Try asking about rescue, adoption, abuse or volunteering 🐾";
-  };
-
+  return "Try: rescue, adopt, medical, volunteer, track 🐾";
+};
   // ✅ SEND MESSAGE
   const sendMessage = () => {
     if (input.trim() === "") return;
