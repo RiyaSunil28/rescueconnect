@@ -44,3 +44,7 @@ mongoose.connect(process.env.MONGO_URI)
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+setInterval(() => {
+  console.log("keep-alive ping");
+}, 5 * 60 * 1000);
