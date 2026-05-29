@@ -10,11 +10,15 @@ function RescueContact() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
 
+  const [popup, setPopup] = useState({
+    show: false,
+    caseId: ""
+  });
+
   const handleSubmit = async () => {
     try {
       const existing = JSON.parse(localStorage.getItem("rescueData")) || {};
 
-      // ✅ FALLBACK FIX (VERY IMPORTANT)
       const fullData = {
         location: existing.location || "Unknown",
         animalDescription: existing.notes || "Not provided",
@@ -32,14 +36,19 @@ function RescueContact() {
 
       const res = await axios.post("http://localhost:5000/api/rescue", fullData);
 
-const caseId = res.data._id; // backend sends id
+      const caseId = res.data.trackId;
 
-alert(`Rescue submitted ✅\nYour Case ID: ${caseId}`);
+      localStorage.setItem("lastCaseId", caseId);
 
-// save for tracking
-localStorage.setItem("lastCaseId", caseId);
+      // ❌ REMOVE ALERT
+      // alert(`Rescue submitted ✅\nYour Case ID: ${caseId}`);
 
-navigate("/trackcase");
+      // ✅ SHOW POPUP INSTEAD
+      setPopup({
+        show: true,
+        caseId
+      });
+
     } catch (err) {
       console.error("FULL ERROR:", err.response || err);
       alert("Error submitting ❌ Check console");
@@ -76,6 +85,46 @@ navigate("/trackcase");
 
         </div>
       </div>
+
+      {/* ✅ POPUP */}
+      {popup.show && (
+        <div className="popup">
+          <h2>Rescue Submitted Successfully ✅</h2>
+
+          <p>
+            Your Case ID: <b>{popup.caseId}</b>
+          </p>
+
+      <button
+  onClick={() => {
+    const id = popup.caseId;
+
+    console.log("COPYING:", id);
+
+    if (!id) {
+      alert("No Case ID found!");
+      return;
+    }
+
+    navigator.clipboard.writeText(String(id));
+
+    alert("Case ID copied ✅");
+  }}
+>
+  Copy Case ID :
+</button>
+
+          <button
+            onClick={() => {
+              setPopup({ show: false, caseId: "" });
+              navigate("/trackcase");
+            }}
+          >
+            Track Case
+          </button>
+        </div>
+      )}
+
     </div>
   );
 }

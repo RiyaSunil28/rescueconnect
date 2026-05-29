@@ -10,6 +10,11 @@ const rescueSchema = new mongoose.Schema({
   name: String,
   phone: String,
   email: String,
+  trackId: {
+  type: String,
+  unique: true,
+  default: () => Math.random().toString(36).substring(2, 12)
+},
   status: { type: String, default: "pending" },
 
   // ✅ ADD THIS

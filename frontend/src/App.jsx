@@ -1,6 +1,7 @@
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import ForgotPassword from "./pages/ForgotPassword";
 import Hero from "./components/Hero";
 import AdminDashboard from "./pages/AdminDashboard";
 import PetDetails from "./pages/PetDetails";
@@ -161,7 +162,8 @@ function AppContent() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup registerUser={registerUser} />} />
         <Route path="/wound-care" element={<WoundCare />} />
-      <Route path="/poison-control" element={<PoisonControl />} />
+        <Route path="/forgot-password"  element={<ForgotPassword />}
+/>      <Route path="/poison-control" element={<PoisonControl />} />
          <Route path="/fractures" element={<Fractures />} />
          <Route path="/pet/:id" element={<PetDetails />} />
        <Route path="/adopt/:id" element={<AdoptForm />} />
@@ -232,18 +234,11 @@ function AppContent() {
         </div>
       )}
 
-      {/* ✅ USERS ONLY ON HOMEPAGE (FIXED PROPERLY) */}
       {location.pathname === "/" && (
-        <div style={{ padding: "20px" }}>
-          <h3>Registered Users</h3>
-          {Array.isArray(users) &&
-            users.map((u) => (
-              <div key={u._id}>
-                {u.name} - {u.email}
-              </div>
-            ))}
-        </div>
-      )}
+  <div style={{ padding: "20px" }}>
+    <h3>Total Registered Users: {users.length}</h3>
+  </div>
+)}
     </>
   );
 }

@@ -13,10 +13,14 @@ function Abuse() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
 
+  const [popup, setPopup] = useState({
+    show: false,
+    caseId: ""
+  });
+
   const nextStep = () => setStep((prev) => prev + 1);
   const prevStep = () => setStep((prev) => prev - 1);
 
-  // ✅ SUBMIT FUNCTION (UPDATED)
   const handleSubmit = () => {
     let priority = "low";
 
@@ -49,8 +53,17 @@ function Abuse() {
         const data = await res.json();
 
         if (res.ok) {
-          // ✅ SHOW CASE ID
-          alert(`Report submitted successfully ✅\nCase ID: ${data._id}`);
+          const caseId = data.trackId;
+
+          // ❌ REMOVE ALERT
+          // alert(`Report submitted successfully ✅\nCase ID: ${data._id}`);
+
+          // ✅ POPUP INSTEAD
+          setPopup({
+            show: true,
+            caseId
+          });
+
           setStep(1);
         } else {
           alert(data.message || "Error submitting report");
@@ -80,6 +93,7 @@ function Abuse() {
 
       <div className="form-section">
 
+        {/* STEP 1 */}
         {step === 1 && (
           <>
             <div className="form-left">
@@ -87,12 +101,12 @@ function Abuse() {
 
               <label>
                 <input type="radio" name="reportType" onChange={() => setReportType("abuse")} />
-                Abuse
+                Abused
               </label>
 
               <label>
                 <input type="radio" name="reportType" onChange={() => setReportType("neglect")} />
-                Neglect
+                Neglected
               </label>
 
               <label>
@@ -109,13 +123,14 @@ function Abuse() {
                 onChange={(e) => setDescription(e.target.value)}
               />
 
-              <button type="button" className="submit-btn" onClick={nextStep}>
+              <button className="submit-btn" onClick={nextStep}>
                 Next →
               </button>
             </div>
           </>
         )}
 
+        {/* STEP 2 */}
         {step === 2 && (
           <div className="form-right" style={{ width: "100%" }}>
             <label>Animal Type</label>
@@ -138,17 +153,18 @@ function Abuse() {
             <input type="file" />
 
             <div className="btn-group">
-              <button type="button" className="submit-btn" onClick={prevStep}>
+              <button className="submit-btn" onClick={prevStep}>
                 ← Previous
               </button>
 
-              <button type="button" className="submit-btn" onClick={nextStep}>
+              <button className="submit-btn" onClick={nextStep}>
                 Next →
               </button>
             </div>
           </div>
         )}
 
+        {/* STEP 3 */}
         {step === 3 && (
           <div className="form-right" style={{ width: "100%" }}>
             <label>Full Name</label>
@@ -161,11 +177,11 @@ function Abuse() {
             <input type="email" onChange={(e) => setEmail(e.target.value)} />
 
             <div className="btn-group">
-              <button type="button" className="submit-btn" onClick={prevStep}>
+              <button className="submit-btn" onClick={prevStep}>
                 ← Previous
               </button>
 
-              <button type="button" className="submit-btn" onClick={handleSubmit}>
+              <button className="submit-btn" onClick={handleSubmit}>
                 Submit Report
               </button>
             </div>
@@ -173,6 +189,33 @@ function Abuse() {
         )}
 
       </div>
+
+      {/* 🔥 POPUP */}
+      {popup.show && (
+        <div className="popup">
+          <h2>Report Submitted Successfully ✅</h2>
+
+          <p>
+            Case ID: <b>{popup.caseId}</b>
+          </p>
+
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText(popup.caseId);
+              alert("Case ID copied ✅");
+            }}
+          >
+            Copy Case ID :
+          </button>
+
+          <button
+            onClick={() => setPopup({ show: false, caseId: "" })}
+          >
+            Close
+          </button>
+        </div>
+      )}
+
     </div>
   );
 }

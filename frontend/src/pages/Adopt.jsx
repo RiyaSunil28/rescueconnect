@@ -57,6 +57,7 @@ function Adopt() {
             <option>Cat</option>
             <option>Bird</option>
             <option>Rabbit</option>
+            <option>Others</option>
           </select>
 
           <label>Gender</label>
