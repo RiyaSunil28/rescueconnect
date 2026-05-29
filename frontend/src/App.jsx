@@ -47,7 +47,7 @@ function AppContent() {
   const [input, setInput] = useState("");
 
   const [users, setUsers] = useState([]);
-  const API_URL = "https://rescueconnect-a8ug.onrender.com/";
+  const API_URL = "https://rescueconnect-a8ug.onrender.com/api/users";
 
   // ✅ FETCH USERS (SAFE)
   useEffect(() => {

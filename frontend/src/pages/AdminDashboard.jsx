@@ -7,7 +7,7 @@ function AdminDashboard() {
   useEffect(() => {
   const fetchCases = async () => {
       try {
-    const res = await axios.get("https://rescueconnect-a8ug.onrender.com/");
+    const res = await axios.get("https://rescueconnect-a8ug.onrender.com/api/rescue");
     setCases(res.data);
       } catch (err) {
         console.error("Error fetching:", err);
