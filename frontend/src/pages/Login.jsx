@@ -16,7 +16,7 @@ function Login() {
     try {
 
       const res = await fetch(
-        "http://localhost:5000/api/users/login",
+        "https://rescueconnect-a8ug.onrender.com/api/users/login",
         {
           method: "POST",
           headers: {
@@ -104,7 +104,7 @@ function Login() {
     try {
 
       const res = await fetch(
-        `http://localhost:5000/api/users/${userId}`,
+        `https://rescueconnect-a8ug.onrender.com/api/users/${userId}`,
         {
           method: "DELETE"
         }

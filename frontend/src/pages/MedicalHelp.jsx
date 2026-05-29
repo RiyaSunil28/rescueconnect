@@ -37,7 +37,7 @@ function MedicalHelp() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/vets?city=${search}`
+        `https://rescueconnect-a8ug.onrender.com/api/vets?city=${search}`
       );
 
       const data = await res.json();

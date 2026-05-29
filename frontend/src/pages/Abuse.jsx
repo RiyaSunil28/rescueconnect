@@ -42,7 +42,7 @@ function Abuse() {
       };
 
       try {
-        const res = await fetch("http://localhost:5000/api/rescue", {
+        const res = await fetch("https://rescueconnect-a8ug.onrender.com/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"

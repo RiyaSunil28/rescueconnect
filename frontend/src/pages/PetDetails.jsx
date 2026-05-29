@@ -9,7 +9,7 @@ function PetDetails() {
   useEffect(() => {
     const fetchPet = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/pets");
+        const res = await axios.get("https://rescueconnect-a8ug.onrender.com/api/pets");
         const found = res.data.find(p => p._id === id);
         setPet(found);
       } catch (err) {

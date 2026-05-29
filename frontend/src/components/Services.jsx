@@ -37,7 +37,7 @@ function Services() {
   const [services, setServices] = useState(defaultServices);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/services")
+    fetch("https://rescueconnect-a8ug.onrender.com/")
       .then(res => res.json())
       .then(data => {
         // ✅ only replace if backend actually has data

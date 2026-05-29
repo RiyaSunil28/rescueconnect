@@ -6,7 +6,7 @@ function LiveMap() {
   const [cases, setCases] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/rescue")
+    axios.get("https://rescueconnect-a8ug.onrender.com/api/rescue")
       .then(res => {
         console.log("MAP DATA:", res.data);
         setCases(res.data);

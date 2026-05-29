@@ -34,7 +34,7 @@ function RescueContact() {
 
       console.log("Sending:", fullData);
 
-      const res = await axios.post("http://localhost:5000/api/rescue", fullData);
+      const res = await axios.post("https://rescueconnect-a8ug.onrender.com/api/rescue", fullData);
 
       const caseId = res.data.trackId;
 

@@ -7,7 +7,7 @@ function AdminDashboard() {
   useEffect(() => {
   const fetchCases = async () => {
       try {
-    const res = await axios.get("http://localhost:5000/api/rescue");
+    const res = await axios.get("https://rescueconnect-a8ug.onrender.com/");
     setCases(res.data);
       } catch (err) {
         console.error("Error fetching:", err);
@@ -19,10 +19,10 @@ function AdminDashboard() {
 
   const updateStatus = async (id, status) => {
     try {
-    await axios.put(`http://localhost:5000/api/rescue/${id}`, { status });
+    await axios.put(`https://rescueconnect-a8ug.onrender.com/api/rescue/${id}`, { status });
 
       // refresh
-      const res = await axios.get("http://localhost:5000/api/rescue");
+      const res = await axios.get("https://rescueconnect-a8ug.onrender.com/api/rescue");
       setCases(res.data);
     } catch (err) {
       console.error(err);

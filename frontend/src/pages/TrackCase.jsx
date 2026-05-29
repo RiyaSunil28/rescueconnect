@@ -9,7 +9,7 @@ function TrackCase() {
     if (!caseId) return alert("Enter Case ID");
 
     try {
-      const res = await fetch(`http://localhost:5000/api/rescue/${caseId}`);
+      const res = await fetch(`https://rescueconnect-a8ug.onrender.com/api/rescue/${caseId}`);
       const data = await res.json();
 
       if (res.ok) {

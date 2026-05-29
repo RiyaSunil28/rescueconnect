@@ -16,7 +16,7 @@ function ForgotPassword() {
     try {
 
       const res = await fetch(
-        "http://localhost:5000/api/users/forgot-password",
+        "https://rescueconnect-a8ug.onrender.com/api/users/forgot-password",
         {
           method: "PUT",
           headers: {

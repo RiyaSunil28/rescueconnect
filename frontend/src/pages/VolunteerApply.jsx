@@ -19,7 +19,7 @@ function VolunteerApply() {
 
       console.log("Sending:", data);
 
-      await axios.post("http://localhost:5000/api/volunteer", data);
+      await axios.post("https://rescueconnect-a8ug.onrender.com/api/volunteer", data);
 
       alert("Application submitted successfully ✅");
 

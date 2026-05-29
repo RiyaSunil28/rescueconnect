@@ -15,7 +15,7 @@ function Adopt() {
   useEffect(() => {
     const fetchPets = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/pets");
+        const res = await axios.get("https://rescueconnect-a8ug.onrender.com/api/pets");
         console.log("Pets:", res.data);
         setPetsData(res.data);
       } catch (err) {
