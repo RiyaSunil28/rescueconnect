@@ -64,11 +64,11 @@
   gap: 40px;
 }
 
-.form-left {
+.form-left  {
   width: 30%;
 }
 
-.form-left label {
+.form-left label{
   display: block;
   margin: 10px 0;
 }
@@ -84,7 +84,7 @@
   font-weight: 600;
 }
 
-.form-right input,
+.form-right input ,
 .form-right select {
   padding: 8px;
   margin-top: 5px;
@@ -119,58 +119,39 @@
 
 /* ================= RESPONSIVE DESIGN ================= */
 
-/* 📱 Tablets */
 @media (max-width: 768px) {
 
-  /* Layout → Column */
-  .adopt-container,
-  .rescue-content,
-  .volunteer-container,
-  .clinics-section,
-  .card-container {
+  .abuse-header h1 {
+    font-size: 24px;
+  }
+
+  .abuse-header h2 {
+    font-size: 20px;
+  }
+
+  .steps-section {
+    flex-wrap: wrap;
+  }
+
+  .form-section {
+    flex-direction: column;
+    width: 95%;
+    padding: 20px;
+  }
+
+  .form-left ,
+  .form-right {
+    width: 100%;
+  }
+
+  .btn-group {
     flex-direction: column;
   }
 
-  /* Grid → 1 column */
-  .pet-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Boxes full width */
-  .filter-box,
-  .roles-box,
-  .process-box,
-  .form-box {
-    width: 100%;
-  }
-
-  /* Map size */
-  .map-box {
-    height: 250px;
-  }
-
-  /* Images fix */
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Text resize */
-  h1 {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  /* Buttons full width */
-  button {
+  .btn-group .submit-btn {
     width: 100%;
   }
 }
-
 
 /* 📱 Small phones */
 @media (max-width: 480px) {
@@ -183,9 +164,5 @@
     font-size: 16px;
   }
 
-  .pet-card img {
-    height: 150px;
-    object-fit: cover;
-  }
-
+ 
 }

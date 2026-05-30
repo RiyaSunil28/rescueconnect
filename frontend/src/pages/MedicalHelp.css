@@ -140,73 +140,49 @@
 
 /* ================= RESPONSIVE DESIGN ================= */
 
-/* 📱 Tablets */
 @media (max-width: 768px) {
 
-  /* Layout → Column */
-  .adopt-container,
-  .rescue-content,
-  .volunteer-container,
+  .medical-hero h1 {
+    font-size: 28px;
+  }
+
   .clinics-section,
+  .firstaid-section,
+  .detail-content {
+    width: 95%;
+  }
+
   .card-container {
     flex-direction: column;
   }
 
-  /* Grid → 1 column */
-  .pet-grid {
-    grid-template-columns: 1fr;
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  /* Boxes full width */
-  .filter-box,
-  .roles-box,
-  .process-box,
-  .form-box {
+  .search-bar input,
+  .search-bar button {
     width: 100%;
+    border-radius: 5px;
   }
 
-  /* Map size */
   .map-box {
     height: 250px;
   }
 
-  /* Images fix */
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Text resize */
-  h1 {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  /* Buttons full width */
-  button {
-    width: 100%;
-  }
 }
 
 
-/* 📱 Small phones */
 @media (max-width: 480px) {
 
-  h1 {
-    font-size: 18px;
+  .medical-hero h1 {
+    font-size: 22px;
   }
 
-  h2 {
+  .detail-content {
+    padding: 20px;
     font-size: 16px;
-  }
-
-  .pet-card img {
-    height: 150px;
-    object-fit: cover;
   }
 
 }

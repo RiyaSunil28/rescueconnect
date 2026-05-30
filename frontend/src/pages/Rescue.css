@@ -70,7 +70,7 @@
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-.form-box label {
+.form-box label{
   font-weight: 600;
   margin-bottom: 5px;
 }
@@ -85,7 +85,7 @@
   width: 100%;
 }
 
-.form-box textarea {
+.form-box textarea  {
   height: 100px;
 }
 
@@ -107,73 +107,38 @@
 
 /* ================= RESPONSIVE DESIGN ================= */
 
-/* 📱 Tablets */
 @media (max-width: 768px) {
 
-  /* Layout → Column */
-  .adopt-container,
-  .rescue-content,
-  .volunteer-container,
-  .clinics-section,
-  .card-container {
+  .rescue-container {
+    padding: 20px;
+  }
+
+  .rescue-content  {
     flex-direction: column;
+    align-items: center;
   }
 
-  /* Grid → 1 column */
-  .pet-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Boxes full width */
-  .filter-box,
-  .roles-box,
-  .process-box,
-  .form-box {
+  .map-box,
+  .form-box  {
     width: 100%;
+    max-width: 500px;
   }
 
-  /* Map size */
-  .map-box {
-    height: 250px;
+  .steps {
+    flex-wrap: wrap;
   }
 
-  /* Images fix */
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Text resize */
-  h1 {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  /* Buttons full width */
-  button {
-    width: 100%;
-  }
 }
 
 
-/* 📱 Small phones */
 @media (max-width: 480px) {
 
-  h1 {
-    font-size: 18px;
+  .rescue-title {
+    font-size: 24px;
   }
 
-  h2 {
-    font-size: 16px;
-  }
-
-  .pet-card img {
-    height: 150px;
-    object-fit: cover;
+  .fake-map {
+    height: 250px;
   }
 
 }

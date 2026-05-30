@@ -11,14 +11,14 @@ padding:40px;
 font-size:28px;
 }
 
-.volunteer-container{
+.volunteer-container {
 display:flex;
 gap:30px;
 padding:40px;
 }
 
 /* LEFT BOX */
-.roles-box{
+.roles-box {
 flex:1;
 background:white;
 padding:25px;
@@ -80,73 +80,39 @@ font-size:16px;
 
 /* ================= RESPONSIVE DESIGN ================= */
 
-/* 📱 Tablets */
 @media (max-width: 768px) {
 
-  /* Layout → Column */
-  .adopt-container,
-  .rescue-content,
-  .volunteer-container,
-  .clinics-section,
-  .card-container {
-    flex-direction: column;
-  }
-
-  /* Grid → 1 column */
-  .pet-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Boxes full width */
-  .filter-box,
-  .roles-box,
-  .process-box,
-  .form-box {
-    width: 100%;
-  }
-
-  /* Map size */
-  .map-box {
-    height: 250px;
-  }
-
-  /* Images fix */
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Text resize */
-  h1 {
+  .volunteer-header {
+    padding: 25px 15px;
     font-size: 22px;
-    text-align: center;
   }
 
-  h2 {
-    font-size: 18px;
+  .volunteer-container {
+    flex-direction: column;
+    padding: 20px;
   }
 
-  /* Buttons full width */
-  button {
+  .roles-box ,
+  .process-box {
     width: 100%;
   }
+
+  .apply-btn {
+    width: 100%;
+  }
+
 }
 
-
-/* 📱 Small phones */
 @media (max-width: 480px) {
 
-  h1 {
-    font-size: 18px;
+  .step {
+    gap: 10px;
   }
 
-  h2 {
-    font-size: 16px;
-  }
-
-  .pet-card img {
-    height: 150px;
-    object-fit: cover;
+  .number {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
   }
 
 }

@@ -11,11 +11,11 @@ body {
 @media (max-width: 768px) {
 
   /* Layout → Column */
-  .adopt-container,
-  .rescue-content,
-  .volunteer-container,
+  .adopt-container ,
+  .rescue-content ,
+  .volunteer-container ,
   .clinics-section,
-  .card-container {
+  .card-container  {
     flex-direction: column;
   }
 
@@ -25,8 +25,8 @@ body {
   }
 
   /* Boxes full width */
-  .filter-box,
-  .roles-box,
+  .filter-box ,
+  .roles-box ,
   .process-box,
   .form-box {
     width: 100%;
@@ -71,7 +71,7 @@ body {
     font-size: 16px;
   }
 
-  .pet-card img {
+  .pet-card{
     height: 150px;
     object-fit: cover;
   }

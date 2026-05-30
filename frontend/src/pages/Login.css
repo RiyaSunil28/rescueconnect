@@ -77,74 +77,28 @@
 }
 
 /* ================= RESPONSIVE DESIGN ================= */
+ 
 
-/* 📱 Tablets */
 @media (max-width: 768px) {
 
-  /* Layout → Column */
-  .adopt-container,
-  .rescue-content,
-  .volunteer-container,
-  .clinics-section,
-  .card-container {
-    flex-direction: column;
+  .login-box {
+    width: 90%;
+    padding: 25px;
   }
 
-  /* Grid → 1 column */
-  .pet-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Boxes full width */
-  .filter-box,
-  .roles-box,
-  .process-box,
-  .form-box {
-    width: 100%;
-  }
-
-  /* Map size */
-  .map-box {
-    height: 250px;
-  }
-
-  /* Images fix */
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Text resize */
-  h1 {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  /* Buttons full width */
-  button {
-    width: 100%;
-  }
 }
 
-
-/* 📱 Small phones */
 @media (max-width: 480px) {
 
-  h1 {
-    font-size: 18px;
+  .login-box {
+    padding: 20px;
   }
 
-  h2 {
-    font-size: 16px;
-  }
-
-  .pet-card img {
-    height: 150px;
-    object-fit: cover;
+  .login-box h2 {
+    font-size: 22px;
   }
 
 }
+
+
+
